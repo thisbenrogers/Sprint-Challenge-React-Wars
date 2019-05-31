@@ -6,7 +6,14 @@ class Character extends React.Component {
   render() {
     return (
       <div className="character-card">
-        <h2>{this.props.characterOnProps.name}</h2>
+        <ul>
+          <li>
+            <h2>{this.props.characterOnProps.name}</h2>
+          </li>
+          <li>
+            <p>Born: {this.props.characterOnProps.birth_year}</p>
+          </li>
+        </ul>
       </div>
     );
   }
