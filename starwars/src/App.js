@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import CharacterList from "./components/CharacterList";
+import Character from "./components/Character";
 
 import "./App.css";
 
@@ -36,7 +36,11 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
-        <CharacterList />
+        <div className="character-list">
+          {this.state.starwarsChars.map(characterFromMap => (
+            <Character characterOnProps={characterFromMap} />
+          ))}
+        </div>
       </div>
     );
   }
