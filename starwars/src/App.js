@@ -37,10 +37,13 @@ class App extends Component {
       <div className="App">
         <h1 className="Header">Characters from Star Wars API</h1>
         <div className="character-list">
-          {this.state.starwarsChars.map(characterFromMap => (
+          {this.state.starwarsChars.map((characterFromMap, index) => (
             <Character
-              key={characterFromMap.url}
-              characterOnProps={characterFromMap}
+              key={index}
+              name={characterFromMap.name}
+              birth={characterFromMap.birth_year}
+              // map={characterFromMap}
+              // uncomment the above line to see all available state in react dev tools
             />
           ))}
         </div>

@@ -4,14 +4,15 @@ import "./StarWars.scss";
 
 class Character extends React.Component {
   render() {
+    const { name, birth } = this.props;
     return (
       <div className="character-card">
         <ul>
           <li>
-            <h2>{this.props.characterOnProps.name}</h2>
+            <h2>{name}</h2>
           </li>
           <li>
-            <p>Born: {this.props.characterOnProps.birth_year}</p>
+            <p>Born: {birth}</p>
           </li>
         </ul>
       </div>
