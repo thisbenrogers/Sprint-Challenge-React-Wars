@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Card } from 'semantic-ui-react';
 
-import Character from './components/Chracter';
+import Character from './components/Character';
 
 import './App.css';
 import './components/StarWars.css';
