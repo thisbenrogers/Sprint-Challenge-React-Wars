@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Container, Card } from 'semantic-ui-react';
 
 import Character from './components/Chracter';
 
 import './App.css';
+import './components/StarWars.css';
+
 
 const App = () => {
   const [swapiData, setSwapiData] = useState([]);
@@ -20,12 +23,14 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <Container className="App" fluid>
       <h1 className="Header">React Wars</h1>
-      {swapiData.map((person, index) => {
-        return <Character key={index} props={person} />
-      })}
-    </div>
+      <Card.Group>
+        {swapiData.map((person, index) => {
+          return <Character key={index} props={person} />
+        })}
+      </Card.Group>
+    </Container>
   );
 }
 
